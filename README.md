@@ -1,2 +1,2 @@
 # 8ball-bot
-Basic Demo 
+Basic Demo Bot for Discord
