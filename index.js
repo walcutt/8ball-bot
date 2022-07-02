@@ -2,6 +2,7 @@ require('dotenv').config();
 const { Client, Intents } = require('discord.js');
 
 let allIntents = new Intents();
+allIntents.add(Intents.FLAGS.GUILDS);
 allIntents.add(Intents.FLAGS.GUILD_MESSAGES);
 
 const client = new Client({ intents: allIntents });
@@ -33,7 +34,7 @@ client.on('ready', () => {
 	console.log('works...');
 });
 
-client.on('message', (message) => {
+client.on('messageCreate', (message) => {
 
 	console.log('message seen');
 
